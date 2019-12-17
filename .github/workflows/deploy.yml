@@ -22,7 +22,7 @@ jobs:
         npm i
         npm run build --if-present
         npm test
-        npm login --username ${{ username }} --password ${{ password }}
+        npm login --username ${{ secrets.username }} --password ${{ secrets.password }}
         npm version patch
         npm publish
       env:
