@@ -21,7 +21,5 @@
   "homepage": "https://github.com/NicmeisteR/Node-Essentials#readme",
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
-  },
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" }
+  }
 }
