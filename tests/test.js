@@ -1,7 +1,7 @@
 let node = require("../src/app");
 
 let data = {
-    "value": "nico"
+    "value": "This is a Test Message."
 };
     
 node.writeToFile("tests", "writeToFile", "json", JSON.stringify(data));
