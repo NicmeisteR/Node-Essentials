@@ -3,6 +3,7 @@ set arg1=%1
 set arg2=%2
 shift
 shift
+call git add -A
 call npm version patch
 call git add -A
 call git commit -m %arg2%
