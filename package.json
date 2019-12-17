@@ -1,0 +1,25 @@
+{
+  "name": "node-essentials",
+  "version": "1.0.8",
+  "description": "Essential Node Toolkit",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicmeisteR/Node-Essentials.git"
+  },
+  "keywords": [
+    "Node"
+  ],
+  "author": "Nicolaas Nel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicmeisteR/Node-Essentials/issues"
+  },
+  "homepage": "https://github.com/NicmeisteR/Node-Essentials#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
