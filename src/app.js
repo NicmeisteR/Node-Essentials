@@ -1,4 +1,5 @@
 const fs = require('fs');
+const express = require('express');
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 exports.writeToFile = function (folder, fileName, extension, data) {
@@ -12,7 +13,6 @@ exports.writeToFile = function (folder, fileName, extension, data) {
 };
 
 exports.get = function (url, setRequestHeader) {
-
     var data = null;
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
@@ -26,4 +26,11 @@ exports.get = function (url, setRequestHeader) {
     xhr.open("GET", url);
     xhr.setRequestHeader(setRequestHeader[0], setRequestHeader[1]);
     xhr.send(data);
+};
+
+exports.express = function (port, directory){
+    port = port || 3000;
+    express()
+      .use(express.static(directory + '/'))
+      .listen(port, () => console.log(`Listening on ${ port }`));
 };

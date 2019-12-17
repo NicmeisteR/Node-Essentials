@@ -5,3 +5,5 @@ let data = {
 };
     
 node.writeToFile("tests", "writeToFile", "json", JSON.stringify(data));
+
+node.express(3000, __dirname);
