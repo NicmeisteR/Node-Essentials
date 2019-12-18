@@ -1,6 +1,6 @@
 {
   "name": "node-essentials",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Essential Node Toolkit",
   "main": "src/app.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/NicmeisteR/Node-Essentials.git"
   },
   "keywords": [
-    "Node"
+    "Node", "Express", "REST", "NodeJS", "ExpressJS", "API", "XMLHTTPRequest", "FS"
   ],
   "author": "Nicolaas Nel",
   "license": "ISC",

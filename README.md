@@ -1,5 +1,5 @@
 # Node-Essentials
-A node toolkit for doing api calls, writing to system etc.
+A node toolkit for doing async api calls, writing to file system, starting up express-js servers and more coming soon.
 
 ## Setup
 Run:
@@ -29,5 +29,14 @@ This would serve the current root directory.
 
 ### <b>get</b> - Simple REST "get" request.
 ```javascript
-    node.get("https://apiurlhere.com/", ["api key desc", "api key value"]);
+    async function get() {
+    try {
+        test = await node.get(
+            "https://apiurlhere.com/",["api key desc", "api key value"])
+            .then(console.log("done"));
+    }
+    finally {
+        console.log(test);
+    }
+};
 ```

@@ -12,20 +12,22 @@ exports.writeToFile = function (folder, fileName, extension, data) {
     });
 };
 
-exports.get = function (url, setRequestHeader) {
-    var data = null;
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === this.DONE) {
-            return this.responseText;
-        }
-    });
-
-    xhr.open("GET", url);
-    xhr.setRequestHeader(setRequestHeader[0], setRequestHeader[1]);
-    xhr.send(data);
+exports.get = async function (url, setRequestHeader) {
+    return new Promise(function (resolve, reject){
+        let data = null;
+        let xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+    
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                resolve(this.responseText);
+            }
+        });
+    
+        xhr.open("GET", url);
+        xhr.setRequestHeader(setRequestHeader[0], setRequestHeader[1]);
+        xhr.send(data);
+    })
 };
 
 exports.express = function (port, directory){
