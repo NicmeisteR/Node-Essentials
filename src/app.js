@@ -37,14 +37,20 @@ exports.express = function (port, directory){
       .listen(port, () => console.log(`Listening on ${ port }`));
 };
 
-// Return only unique values.
-// Only unique sample.
-// let unique = test.filter( distinct );
+/**
+ * Return only unique values in array, example: unique = array.filter( distinct );
+ *
+ * @return {Array}
+ */
 exports.distinct = function(value, index, self) { 
     return self.indexOf(value) === index;
 }
 
-// Return values grouped by key.
+/**
+ * Return values grouped by key.
+ *
+ * @return {object}
+ */
 exports.groupBy = function(xs, key) {
     return xs.reduce(function(rv, x) {
       (rv[x[key]] = rv[x[key]] || []).push(x);
@@ -52,6 +58,11 @@ exports.groupBy = function(xs, key) {
     }, {});
 };
 
+/**
+ * Read all the files from the specified folder.
+ *
+ * @param {string} folder
+ */
 exports.readAllFiles = function(folder){
     // Read from any file name in the specified folder.
     fs.readdir(`./${folder}/`, (err, files) => {
