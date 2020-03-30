@@ -36,3 +36,28 @@ exports.express = function (port, directory){
       .use(express.static(directory + '/'))
       .listen(port, () => console.log(`Listening on ${ port }`));
 };
+
+// Return only unique values.
+// Only unique sample.
+// let unique = test.filter( distinct );
+exports.distinct = function(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+// Return values grouped by key.
+exports.groupBy = function(xs, key) {
+    return xs.reduce(function(rv, x) {
+      (rv[x[key]] = rv[x[key]] || []).push(x);
+      return rv;
+    }, {});
+};
+
+exports.readAllFiles = function(folder){
+    // Read from any file name in the specified folder.
+    fs.readdir(`./${folder}/`, (err, files) => {
+        files.forEach(file => {
+            // Read the file from the specified folder into memory
+            eval(fs.readFileSync(`./${folder}/${file}`)+'');
+        });
+    })
+}
