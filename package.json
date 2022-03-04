@@ -2,7 +2,8 @@
   "name": "node-essentials",
   "version": "1.2.8",
   "description": "Essential Node Toolkit",
-  "main": "src/app.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "node tests/test.js"
   },
@@ -11,7 +12,14 @@
     "url": "git+https://github.com/NicmeisteR/Node-Essentials.git"
   },
   "keywords": [
-    "Node", "Express", "REST", "NodeJS", "ExpressJS", "API", "XMLHTTPRequest", "FS"
+    "Node",
+    "Express",
+    "REST",
+    "NodeJS",
+    "ExpressJS",
+    "API",
+    "XMLHTTPRequest",
+    "FS"
   ],
   "author": "Nicolaas Nel",
   "license": "ISC",
@@ -20,7 +28,7 @@
   },
   "homepage": "https://github.com/NicmeisteR/Node-Essentials#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "xmlhttprequest": "^1.8.0"
+    "express": "^4.17.3",
+    "node-fetch": "^3.2.1"
   }
 }
