@@ -38,4 +38,4 @@ function getDistinct(){
 // getData()
 getDistinct()
 // node.server.start(3000, './');
-node.fileManager.readAllFiles('./tests');
+// node.fileManager.readAllFiles('./tests');
