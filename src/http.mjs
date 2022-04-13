@@ -13,6 +13,10 @@ async function executePut(url, options) {
     return response(url, options, 'PUT');
 }
 
+async function executeDelete(url, options) {
+    return response(url, options, 'DELETE');
+}
+
 function response(url, options, method){
     options = {...options, ...{
         method: method
@@ -23,4 +27,4 @@ function response(url, options, method){
     })
 }
 
-export { executeGet, executePost, executePut };
+export { executeGet, executePost, executePut, executeDelete };

@@ -1,6 +1,6 @@
 {
   "name": "node-essentials",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Essential Node Toolkit",
   "main": "src/index.mjs",
   "type": "module",

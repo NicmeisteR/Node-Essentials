@@ -45,6 +45,7 @@ import * as node from 'node-essentials';
     * [get](#get) - Simple REST "GET" request.
     * [post](#post) - Simple REST "POST" request.
     * [put](#put) - Simple REST "PUT" request.
+    * [delete](#delete) - Simple REST "DELETE" request.
 
 * [helpers](#helpers) - Helper functions.
     * [distinct](#distinct) - Return a Distinct array.
@@ -137,7 +138,31 @@ Response:
     id: 4
 }
 ```
+### <a id="delete">Simple Delete</a>
 
+ ```typescript
+executePut(url: string, options?: any): Promise<any>
+ ```
+   Implementation:
+```javascript
+import http from 'node-essentials';
+
+async function deleteData() {
+    const data = await http.executeDelete("https://my-json-server.typicode.com/typicode/demo/posts", {
+        body: {
+            "id": 4,
+            "title": "Post 4"
+        }
+    }).then();
+    console.log(data); 
+}
+```
+Response:
+```json
+{
+    id: null
+}
+```
 
 
 
