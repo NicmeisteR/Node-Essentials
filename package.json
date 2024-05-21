@@ -1,6 +1,6 @@
 {
   "name": "node-essentials",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Essential Node Toolkit",
   "main": "src/index.mjs",
   "type": "module",
@@ -18,7 +18,6 @@
     "NodeJS",
     "ExpressJS",
     "API",
-    "XMLHTTPRequest",
     "FS"
   ],
   "author": "Nicolaas Nel",
@@ -28,7 +27,9 @@
   },
   "homepage": "https://github.com/NicmeisteR/Node-Essentials#readme",
   "dependencies": {
-    "express": "^4.17.3",
-    "node-fetch": "^3.2.1"
+    "express": "^4.17.3"
+  },
+  "engines" : { 
+    "node" : ">=18.0.0"
   }
 }

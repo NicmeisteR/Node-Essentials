@@ -1,6 +1,3 @@
-// var fetch = require('node-fetch');
-import fetch from 'node-fetch';
-
 async function executeGet(url, options) {
     return response(url, options, 'GET');
 }
